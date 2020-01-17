@@ -1,0 +1,38 @@
+Class:
+APP
+Data: Manu
+
+User:
+Data: Name,Email,phone,address
+Behaviors: browse(),addToCart(), deleteItem(), placeOrder(),checkout(),confirmDelievered(),addTips();
+
+Order:
+Data: time, order#
+Behaviors: displayOrder(), cancel Order()
+
+Resturant:
+Behaviors: displayOrder(), assignOrder(); searchDeliveryMen();
+
+DeliveryMan:
+Data: Name, phone, location, boolean isAvailalbe
+Behavior: deliverOrder(); callUser();
+
+program flow:
+    User.browse()-->
+    User.addTocart()-->
+    User.deleteItem()-->
+    User.placeOrder()-->
+    User.checkout()-->
+    Resturant.displayOrder();-->
+    Resturant.searchDeliverMen();-->
+    Resturant.assignOrder() //if isAvailable == true;-->
+    DeliveryMen.deliverOrder;-->
+    DeliverMen.callUser();
+    User.confirmDelievered();-->
+    User.addTips();
+
+
+
+
+
+

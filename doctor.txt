@@ -1,0 +1,45 @@
+Class:
+    user
+        behaviors:
+        searchDoctor()
+        selectDoctor()
+        enterData
+
+        Data: insuranceProvider, age, name, address
+
+
+
+
+
+    Server:
+
+        boolean Found;
+        behaviors:
+            1. sendNotification()
+            2. sendList()
+            3. matchData()
+            4. scheduleMeeting()
+
+
+    Doctor:
+        Data: boolean isAvailable
+
+
+
+
+
+program flow:
+    user.enterData(age,name,address);
+    -->user.searchDoctor(insuranceProvider);
+    --> Server.matchData(); if (Found == true)
+    --> Sever.sendList();
+    --> user.selectdoctor();
+    --> aDoctor=user.selectdoctor();
+    --> aDoctor.isAvailable = false;
+    --> Sever.scheduleMeeting();
+    --> Sever.sendNotification(user);
+    --> Sever.sendNotification(aDoctor);
+
+
+
+   -----------------------END-------------------------------------
