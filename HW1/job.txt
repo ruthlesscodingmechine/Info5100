@@ -1,0 +1,51 @@
+Class:
+
+Server
+
+data:
+boolean matchSuccess;
+
+behavior:
+
+getUserInput(), matchDatabase(keyword), displayResult(),notifyCompany()
+
+
+user:
+
+data:
+
+Name, position, phone number, email address,resume,account number,password
+
+behavior:
+
+search(); applyJobs(); uploadResume(),sendResume();
+
+
+company:
+data:
+boolean havaJobOpenning
+
+behavior:
+evaluateCandidate(),sendFeedBack(),
+
+
+
+
+program flow:
+           user.login(account name,password);
+        -->user.uploadResume();
+        -->user.search();
+        -->server.getUserInput();
+        -->server.matchDatabase();
+        -->if(matchSucceed==true); else{ System.out.println("no job found based on your input")}
+        -->server.displayResult();
+        -->user.applyJobs();
+        -->user.sendResume();
+        -->server.notifyCompany();
+        -->company.evaluateCandidate();
+        -->company.sendFeedBack();
+
+
+   -----------------------END-------------------------------------
+
+
