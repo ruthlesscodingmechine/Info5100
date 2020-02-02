@@ -9,6 +9,9 @@ class main {
             if(trimed.charAt(i) == ' '){
                 ans.append(trimed.substring(i + 1, j));
                 ans.append(trimed.charAt(i));
+                while(trimed.charAt(i - 1) == ' '){
+                    i--;
+                }
                 j = i;
             }
             if(i == 0){
@@ -20,7 +23,7 @@ class main {
     }
    public static void main(String[] args) {
         // write your code here
-        String input = "good really are Man Spider and Strange Doctor";
+        String input = "  good really are Man Spider and   Strange Doctor";
         String res = reverse(input);
         System.out.print(res);
     }
