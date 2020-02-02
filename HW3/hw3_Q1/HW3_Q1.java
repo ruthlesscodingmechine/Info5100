@@ -1,3 +1,4 @@
+class Test{
 public class Student {
             private String name;
             private int ID;
@@ -70,3 +71,4 @@ public class Course {
         System.out.println(c1.numberOfStudent);
         System.out.print(c1.students[0].getName());
     }
+}
