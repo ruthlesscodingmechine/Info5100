@@ -1,6 +1,6 @@
 public class Candy extends DessertItem{
-    public double pound;
-    public double pricePerPound;
+     double pound;
+     double pricePerPound;
     public Candy(String n, double pound, double price){
         super(n);
         this.pound = pound;
@@ -13,13 +13,14 @@ public class Candy extends DessertItem{
         return cost;
     }
     public String toString(){
-        String s = Double.toString(this.pound) + ' ' + "lbs." + ' ' + '@' + DessertShoppe.cents2DollarsAndCents(this.pricePerPound) + ' ' + "/lb." + "\n";
+//        String s3 = this.pound + " ";
+        String s2 = this.pound + " " + "lbs." + " " + '@' + DessertShoppe.cents2DollarsAndCents(this.pricePerPound) + ' ' + "/lb." + "\n";
         String s1 = this.getName();
         for (int i = s1.length(); i < DessertShoppe.maximumSizeofItemName; i++) {
             s1 += " ";
         }
-        s += s1;
-        s += DessertShoppe.cents2DollarsAndCents(this.getCost()) + "\n";
-        return s;
+        s2 += s1;
+        s2 += DessertShoppe.cents2DollarsAndCents(this.getCost()) + "\n";
+        return s2;
     }
 }
