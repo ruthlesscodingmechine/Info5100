@@ -31,8 +31,8 @@ public class Mreview implements Comparable<Mreview>{
     public int compareTo(Mreview o) {
         return this.title.compareTo(o.title);
     }
-    public boolean equals(Mreview o){
-        if(this.title.equals(o.title)){
+    public boolean equals(Object o){
+        if((o instanceof Mreview) && this.title.equals((((Mreview) o).title))){
             return true;
         }
         return false;
