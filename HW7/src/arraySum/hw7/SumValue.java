@@ -3,7 +3,6 @@ package arraySum.hw7;
 import java.util.Random;
 
 public class SumValue {
-
     static void generateRandomArray(int[] arr) {
         int size = arr.length;
         Random random = new Random();
@@ -49,7 +48,6 @@ public class SumValue {
             for(int i = s1;i < s2; i++){
                 this.sum += arr[i];
             }
-            System.out.println(sum);
         }
         public int getSum(){
             return this.sum;
@@ -64,9 +62,9 @@ public class SumValue {
         }
         SumValue sv = new SumValue();
         long sum = sv.sum(arr);
-
-        System.out.println("true result:" + res);
         System.out.println("sum: " + sum);
-        System.out.println(res == sum);
+        /* test if result is true
+        System.out.println("true result:" + res);
+        System.out.println(res == sum); */
     }
 }
